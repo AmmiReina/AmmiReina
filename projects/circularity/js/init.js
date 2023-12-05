@@ -34,6 +34,7 @@ var init = function (window) {
 
         for (var i = 0; i < 100; i++) {
             drawCircle();
+            physikz.addRandomVelocity(circle, canvas, 100, 1000);
           }
         
         ////////////////////////////////////////////////////////////
