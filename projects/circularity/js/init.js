@@ -34,7 +34,7 @@ var init = function (window) {
 
         for (var i = 0; i < 100; i++) {
             drawCircle();
-            physikz.addRandomVelocity(circle, canvas, 100, 1000);
+            physikz.addRandomVelocity(circle, canvas, 8, 10);
           }
         
         ////////////////////////////////////////////////////////////
@@ -82,16 +82,16 @@ var init = function (window) {
             }
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             // if the circle has gone past the LEFT side of the screen then place it on the LEFT
-            if (circle.x >= canvas.width) {
-                circle.x = 10;
+            if (circle.x < 0) {
+                circle.x = canvas.width;
             }
             // if the circle has gone past the TOP side of the screen then place it on the BOTTOM
             if (circle.y > canvas.height){
-                circle.y = 50;
+                circle.y = 0;
             }
             // If the circle has gone past the BOTTOM side of the screen then place it on the TOP
-            if (circle.y >= canvas.height){
-                circle.y = 9;
+            if (circle.y < 0){
+                circle.y = canvas.height;
             }
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
